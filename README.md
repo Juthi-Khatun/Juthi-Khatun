@@ -1,6 +1,6 @@
 <div align="center">
 
-  <h1>✨ Hi, I'm Juthi Aktar ✨</h1>
+  <h1>✨ Hi, I'm Juthi Khatun ✨</h1>
   <b>Frontend Web Developer | Passionate Learner</b>
   <p>──────────────────────────────────────────</p>
 
