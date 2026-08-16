@@ -1,0 +1,258 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0b0f19;
+  color: #f3f4f6;
+  line-height: 1.6;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Light Theme Styling */
+body.light-mode {
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+
+body.light-mode .navbar {
+  background: rgba(255, 255, 255, 0.85);
+  border-bottom: 1px solid #e2e8f0;
+}
+
+body.light-mode .nav-links a { color: #475569; }
+body.light-mode .service-card, 
+body.light-mode .team-card,
+body.light-mode .contact-form {
+  background: #ffffff;
+  border-color: #e2e8f0;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 8%;
+  background: rgba(11, 15, 25, 0.85);
+  backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.logo { font-size: 26px; font-weight: 800; letter-spacing: -1px; }
+.logo span { color: #6366f1; }
+
+.nav-links { display: flex; list-style: none; gap: 30px; }
+.nav-links a { color: #9ca3af; text-decoration: none; font-weight: 500; transition: 0.3s; }
+.nav-links a:hover { color: #6366f1; }
+
+.nav-right { display: flex; align-items: center; gap: 15px; }
+
+.theme-btn {
+  background: rgba(99, 102, 241, 0.1);
+  color: #818cf8;
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  padding: 10px 14px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.btn-cta {
+  background: #6366f1;
+  color: white;
+  padding: 10px 22px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* Hero Section */
+.hero { text-align: center; padding: 100px 10% 60px; }
+.hero-content { max-width: 800px; margin: 0 auto; }
+
+.badge {
+  background: rgba(99, 102, 241, 0.1);
+  color: #818cf8;
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  padding: 6px 18px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.hero h1 {
+  font-size: 54px;
+  font-weight: 800;
+  margin: 25px 0;
+  letter-spacing: -1.5px;
+}
+
+.hero p { color: #9ca3af; font-size: 18px; margin-bottom: 35px; }
+
+.hero-btns { display: flex; justify-content: center; gap: 15px; margin-bottom: 60px; }
+
+.btn {
+  padding: 14px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-primary { background: #6366f1; color: white; }
+.btn-secondary { background: #1f2937; color: white; }
+
+/* Stats Banner */
+.hero-stats {
+  display: flex;
+  justify-content: space-around;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.stat-item h3 { font-size: 36px; color: #6366f1; font-weight: 800; }
+.stat-item p { color: #9ca3af; font-size: 14px; }
+
+/* Section Title */
+section { padding: 90px 8%; }
+.section-title { text-align: center; margin-bottom: 60px; }
+.sub-title { color: #6366f1; font-weight: 700; text-transform: uppercase; font-size: 12px; letter-spacing: 1.5px; }
+.section-title h2 { font-size: 38px; font-weight: 800; margin-top: 5px; }
+.section-title p { color: #9ca3af; margin-top: 8px; }
+
+/* Services Grid */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.service-card {
+  background: #111827;
+  padding: 35px;
+  border-radius: 20px;
+  border: 1px solid #1f2937;
+  transition: 0.3s;
+}
+
+.service-card:hover { transform: translateY(-8px); border-color: #6366f1; }
+
+.icon {
+  width: 50px; height: 50px;
+  background: rgba(99, 102, 241, 0.1);
+  color: #818cf8;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 12px; font-size: 22px; margin-bottom: 20px;
+}
+
+/* Portfolio Section */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.project-card {
+  border-radius: 20px;
+  overflow: hidden;
+  background: #111827;
+  border: 1px solid #1f2937;
+}
+
+.project-img { height: 220px; background-size: cover; background-position: center; }
+
+.project-info { padding: 20px; }
+.project-info span { color: #6366f1; font-size: 12px; font-weight: 600; }
+.project-info h3 { font-size: 18px; margin-top: 5px; }
+
+/* Team Section */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+}
+
+.team-card {
+  background: #111827;
+  padding: 25px;
+  border-radius: 20px;
+  border: 1px solid #1f2937;
+  text-align: center;
+}
+
+.team-img {
+  width: 100px; height: 100px;
+  border-radius: 50%;
+  margin: 0 auto 15px;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Contact Section */
+.contact-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  background: rgba(255,255,255,0.01);
+}
+
+.contact-info h2 { font-size: 32px; font-weight: 800; margin-bottom: 15px; }
+.info-item { margin-top: 15px; color: #9ca3af; display: flex; align-items: center; gap: 12px; }
+
+.contact-form {
+  background: #111827;
+  padding: 35px;
+  border-radius: 20px;
+  border: 1px solid #1f2937;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  padding: 12px 16px;
+  background: #1f2937;
+  border: 1px solid #374151;
+  color: white;
+  border-radius: 8px;
+  outline: none;
+}
+
+/* Footer */
+footer {
+  padding: 40px 8%;
+  border-top: 1px solid #1f2937;
+  text-align: center;
+}
+
+.footer-content { display: flex; flex-direction: column; align-items: center; gap: 15px; }
+.socials { display: flex; gap: 20px; }
+.socials a { color: #9ca3af; font-size: 18px; }
+
+@media (max-width: 768px) {
+  .nav-links { display: none; } /* ছোট স্ক্রিনে লিংকগুলো গুটিয়ে রাখা */
+  .hero { padding-top: 40px; }
+  .hero-btns { flex-direction: column; width: 100%; }
+  .btn { width: 100%; justify-content: center; }
+  .service-grid, .portfolio-grid, .team-grid {
+    grid-template-columns: 1fr; /* মোবাইলে সিঙ্গেল কলাম */
+  }
+}
